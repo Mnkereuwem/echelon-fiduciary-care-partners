@@ -25,7 +25,12 @@ npm run preview
 
 Static output is in `dist/`.
 
+## Contact form
+
+Submissions are sent to **mikenkereuwem1@gmail.com** via [FormSubmit](https://formsubmit.co).
+
+**First-time setup:** Submit the form once from the live site, then open the activation email from FormSubmit and click the confirmation link. After that, all inquiries will arrive in your inbox.
+
 ## Customization
 
-- Replace the headshot placeholder in `src/components/Credentials.jsx` with an `<img>` pointing to your professional photo.
-- Wire the contact form in `src/components/Contact.jsx` to your backend or form service (e.g. Formspree, Netlify Forms).
+- Replace the headshot in `src/components/Credentials.jsx` if you update your photo in `public/headshot.png`.

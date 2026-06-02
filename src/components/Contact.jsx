@@ -1,5 +1,8 @@
 import { useState } from 'react'
 
+const CONTACT_EMAIL = 'mikenkereuwem1@gmail.com'
+const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
+
 const initialForm = {
   name: '',
   title: '',
@@ -11,15 +14,55 @@ const initialForm = {
 export default function Contact() {
   const [form, setForm] = useState(initialForm)
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target
     setForm((prev) => ({ ...prev, [name]: value }))
+    if (error) setError('')
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError('')
+
+    try {
+      const response = await fetch(FORMSUBMIT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: 'Echelon Fiduciary — New Consultation Inquiry',
+          _template: 'table',
+          _captcha: 'false',
+          _replyto: form.email,
+          name: form.name,
+          professional_title: form.title,
+          email: form.email,
+          phone: form.phone || 'Not provided',
+          case_context: form.context,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok || data.success !== 'true') {
+        throw new Error(data.message || 'Submission failed')
+      }
+
+      setSubmitted(true)
+      setForm(initialForm)
+    } catch {
+      setError(
+        'We could not send your inquiry. Please try again or email us directly at mikenkereuwem1@gmail.com.',
+      )
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -50,6 +93,12 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {error && (
+                  <p className="font-sans text-sm text-red-300/90 border border-red-400/30 bg-red-950/20 px-4 py-3">
+                    {error}
+                  </p>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block font-sans text-xs uppercase tracking-widest text-cream/50 mb-2">
@@ -60,9 +109,10 @@ export default function Contact() {
                       name="name"
                       type="text"
                       required
+                      disabled={loading}
                       value={form.name}
                       onChange={handleChange}
-                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors"
+                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors disabled:opacity-60"
                       placeholder="Full name"
                     />
                   </div>
@@ -75,9 +125,10 @@ export default function Contact() {
                       name="title"
                       type="text"
                       required
+                      disabled={loading}
                       value={form.title}
                       onChange={handleChange}
-                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors"
+                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors disabled:opacity-60"
                       placeholder="Attorney, CLPF, Trustee…"
                     />
                   </div>
@@ -93,9 +144,10 @@ export default function Contact() {
                       name="email"
                       type="email"
                       required
+                      disabled={loading}
                       value={form.email}
                       onChange={handleChange}
-                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors"
+                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors disabled:opacity-60"
                       placeholder="professional@firm.com"
                     />
                   </div>
@@ -107,9 +159,10 @@ export default function Contact() {
                       id="phone"
                       name="phone"
                       type="tel"
+                      disabled={loading}
                       value={form.phone}
                       onChange={handleChange}
-                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors"
+                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors disabled:opacity-60"
                       placeholder="(000) 000-0000"
                     />
                   </div>
@@ -124,15 +177,20 @@ export default function Contact() {
                     name="context"
                     rows={5}
                     required
+                    disabled={loading}
                     value={form.context}
                     onChange={handleChange}
-                    className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors resize-none"
+                    className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors resize-none disabled:opacity-60"
                     placeholder="Summarize the matter, parties involved, and desired clinical scope…"
                   />
                 </div>
 
-                <button type="submit" className="btn-primary w-full sm:w-auto">
-                  Submit Inquiry
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="btn-primary w-full sm:w-auto disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {loading ? 'Sending…' : 'Submit Inquiry'}
                 </button>
               </form>
             )}
