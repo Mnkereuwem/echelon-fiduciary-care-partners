@@ -1,0 +1,144 @@
+import { useState } from 'react'
+
+const initialForm = {
+  name: '',
+  title: '',
+  email: '',
+  phone: '',
+  context: '',
+}
+
+export default function Contact() {
+  const [form, setForm] = useState(initialForm)
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setForm((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setSubmitted(true)
+  }
+
+  return (
+    <section id="contact" className="relative border-t border-champagne/15">
+      <div className="absolute inset-0 bg-gradient-to-t from-bottle-dark to-transparent pointer-events-none" />
+      <div className="section-padding max-w-7xl mx-auto relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+          <div>
+            <p className="section-label">Consultation Intake</p>
+            <h2 className="section-title mb-6">Begin a Confidential Dialogue</h2>
+            <p className="font-sans text-cream/65 leading-relaxed max-w-md">
+              Engagements are initiated through professional referral channels. Submit your
+              inquiry below and a member of our practice will respond within one business day.
+            </p>
+            <div className="mt-12 hidden lg:block">
+              <div className="w-px h-32 bg-champagne/30" />
+            </div>
+          </div>
+
+          <div>
+            {submitted ? (
+              <div className="gold-border p-10 md:p-12 text-center animate-fade-in">
+                <p className="font-serif text-2xl text-champagne mb-4">Inquiry Received</p>
+                <p className="font-sans text-cream/70 text-sm leading-relaxed">
+                  Thank you for your interest. We will be in touch shortly to discuss your case
+                  context.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block font-sans text-xs uppercase tracking-widest text-cream/50 mb-2">
+                      Name
+                    </label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      value={form.name}
+                      onChange={handleChange}
+                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors"
+                      placeholder="Full name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="title" className="block font-sans text-xs uppercase tracking-widest text-cream/50 mb-2">
+                      Professional Title
+                    </label>
+                    <input
+                      id="title"
+                      name="title"
+                      type="text"
+                      required
+                      value={form.title}
+                      onChange={handleChange}
+                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors"
+                      placeholder="Attorney, CLPF, Trustee…"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="email" className="block font-sans text-xs uppercase tracking-widest text-cream/50 mb-2">
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      value={form.email}
+                      onChange={handleChange}
+                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors"
+                      placeholder="professional@firm.com"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block font-sans text-xs uppercase tracking-widest text-cream/50 mb-2">
+                      Phone
+                    </label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={form.phone}
+                      onChange={handleChange}
+                      className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors"
+                      placeholder="(000) 000-0000"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="context" className="block font-sans text-xs uppercase tracking-widest text-cream/50 mb-2">
+                    Brief Case Context
+                  </label>
+                  <textarea
+                    id="context"
+                    name="context"
+                    rows={5}
+                    required
+                    value={form.context}
+                    onChange={handleChange}
+                    className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors resize-none"
+                    placeholder="Summarize the matter, parties involved, and desired clinical scope…"
+                  />
+                </div>
+
+                <button type="submit" className="btn-primary w-full sm:w-auto">
+                  Submit Inquiry
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

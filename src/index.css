@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bottle text-cream font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-champagne/30 text-cream;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-20 lg:py-28;
+  }
+
+  .gold-border {
+    @apply border border-champagne/40 transition-colors duration-300;
+  }
+
+  .gold-border-hover {
+    @apply hover:border-champagne/80 hover:shadow-[0_0_40px_-12px_rgba(197,160,89,0.25)];
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide
+      bg-champagne text-bottle-dark transition-all duration-300
+      hover:bg-champagne-light hover:shadow-lg hover:shadow-champagne/20
+      focus:outline-none focus:ring-2 focus:ring-champagne/50 focus:ring-offset-2 focus:ring-offset-bottle;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide
+      border border-champagne/60 text-cream bg-transparent transition-all duration-300
+      hover:border-champagne hover:bg-champagne/10
+      focus:outline-none focus:ring-2 focus:ring-champagne/40 focus:ring-offset-2 focus:ring-offset-bottle;
+  }
+
+  .section-label {
+    @apply font-sans text-xs font-medium uppercase tracking-ultra text-champagne/90 mb-4;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-cream leading-tight;
+  }
+
+  .architectural-grid {
+    background-image:
+      linear-gradient(rgba(197, 160, 89, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(197, 160, 89, 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}
