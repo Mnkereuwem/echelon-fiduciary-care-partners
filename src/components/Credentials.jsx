@@ -7,9 +7,9 @@ const education = [
   },
   {
     institution: 'Hamilton College',
-    degree: 'Bachelor of Arts',
+    degree: 'Undergraduate',
     detail:
-      'Undergraduate study developing advanced analytical frameworking and clear, objective argumentation.',
+      'Undergraduate study developing advanced analytical frameworking and clear, objective argumentation—sharpened on the football field and track, where the discipline of a varsity athlete translates directly to sustained performance under fiduciary pressure.',
   },
   {
     institution: 'Columbia University',
