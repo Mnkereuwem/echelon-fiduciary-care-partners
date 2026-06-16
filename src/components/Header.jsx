@@ -37,7 +37,7 @@ export default function Header() {
           href="#"
           className="font-serif text-[0.65rem] sm:text-xs md:text-sm font-semibold tracking-ultra text-cream leading-snug max-w-[200px] sm:max-w-none hover:text-champagne transition-colors duration-300"
         >
-          ECHELON FIDUCIARY PARTNERS
+          ECHELON FIDUCIARY CARE PARTNERS
         </a>
 
         <nav className="hidden lg:flex items-center gap-10">

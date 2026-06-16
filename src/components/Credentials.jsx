@@ -37,7 +37,7 @@ export default function Credentials() {
               <div className="relative h-full w-full bg-bottle-light gold-border overflow-hidden">
                 <img
                   src="/headshot.png"
-                  alt="Founder, Echelon Fiduciary Partners"
+                  alt="Founder, Echelon Fiduciary Care Partners"
                   className="h-full w-full object-cover object-[center_20%] grayscale-[15%] contrast-[1.05]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-bottle/40 via-transparent to-bottle/10 pointer-events-none" />
@@ -48,7 +48,7 @@ export default function Credentials() {
           <div className="lg:col-span-7 space-y-10">
             <div className="space-y-6">
               <p className="font-sans text-cream/80 leading-relaxed text-base md:text-lg">
-                Echelon Fiduciary Partners was formed at the intersection of elite
+                Echelon Fiduciary Care Partners was formed at the intersection of elite
                 institutional training and frontline clinical mastery—purpose-built for the
                 fiduciary class managing estates where cognitive decline, family fracture, and
                 litigation risk converge.

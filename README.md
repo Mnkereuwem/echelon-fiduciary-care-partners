@@ -1,4 +1,4 @@
-# Echelon Fiduciary Partners
+# Echelon Fiduciary Care Partners
 
 Premium single-page portfolio site for a B2B clinical consultancy serving Southern California fiduciaries.
 
