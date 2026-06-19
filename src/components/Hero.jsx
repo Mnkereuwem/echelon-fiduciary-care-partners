@@ -25,8 +25,8 @@ export default function Hero() {
             <a href="#contact" className="btn-primary">
               Partner With Us
             </a>
-            <a href="#services" className="btn-secondary">
-              Our Practice Scope
+            <a href="#portals" className="btn-secondary">
+              Explore Our Portals
             </a>
           </div>
         </div>

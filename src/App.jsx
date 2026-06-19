@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
+import Portals from './components/Portals'
 import Services from './components/Services'
 import Credentials from './components/Credentials'
 import Sectors from './components/Sectors'
@@ -12,6 +13,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <Portals />
         <Services />
         <Credentials />
         <Sectors />
