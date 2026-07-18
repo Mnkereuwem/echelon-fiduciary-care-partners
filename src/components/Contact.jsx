@@ -36,7 +36,7 @@ export default function Contact() {
           Accept: 'application/json',
         },
         body: JSON.stringify({
-          _subject: 'Echelon Fiduciary — New Consultation Inquiry',
+          _subject: 'Echelon Med Legal — New Consultation Inquiry',
           _template: 'table',
           _captcha: 'false',
           _replyto: form.email,
