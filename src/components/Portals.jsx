@@ -10,7 +10,7 @@ const portals = [
       {
         title: 'Statewide Physical Distribution',
         description:
-          'Gain instant access to a managed network of 50 strategically located physical office nodes across California, optimizing your presence within statutory regional panel allocation limits.',
+          'Gain access to 10 managed, compliant medical offices across California, supporting a broader QME panel presence without requiring physicians to build and operate each location independently.',
       },
       {
         title: 'The Echelon Chrono-Engine™',
@@ -28,7 +28,7 @@ const portals = [
     id: 'payor-portal',
     audience: 'For Law Firms & Claims Examiners',
     portal: 'The Payor Portal',
-    headline: 'Fiduciary-Grade Medical-Legal Evidence.',
+    headline: 'California QME-Grade Medical-Legal Evidence.',
     subheadline:
       'Objective, Data-Verified Forensic Timelines and Comprehensive Evaluative Reporting Delivered with Absolute Statutory Compliance.',
     valueProps: [
@@ -40,7 +40,7 @@ const portals = [
       {
         title: 'Guaranteed 30-Day Service',
         description:
-          'Strict operational protocols ensure full adherence to California&apos;s statutory submission deadlines, completely mitigating late-file delivery risks.',
+          'Strict operational protocols support adherence to California’s statutory submission deadlines and reduce late-delivery risk.',
       },
       {
         title: 'Unassailable Evidence Timelines',
@@ -104,6 +104,27 @@ export default function Portals() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="mt-8 lg:mt-10 gold-border bg-bottle-dark/80 p-8 md:p-10 lg:p-12">
+          <p className="section-label">Fair-Market-Value Engagement</p>
+          <h3 className="font-serif text-2xl md:text-3xl text-cream leading-tight mb-5">
+            Transparent Infrastructure. Physician Independence.
+          </h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+            <p className="font-sans text-sm md:text-base text-cream/65 leading-relaxed">
+              Our fee structure consists of a flat monthly infrastructure retainer plus
+              pass-through expenses. The retainer reflects the cost of leasing, furnishing,
+              staffing, and administering 10 compliant medical offices across California, as
+              well as managing high-volume medical records and QME panel documentation.
+            </p>
+            <p className="font-sans text-sm md:text-base text-cream/65 leading-relaxed">
+              We also coordinate approved practice expenses that may include physician travel,
+              meals, and accommodations. Echelon Med Legal provides non-clinical infrastructure
+              and administrative support only; we do not make clinical decisions, direct
+              medical opinions, or interfere with any part of the physician&apos;s evaluation.
+            </p>
+          </div>
         </div>
       </div>
     </section>

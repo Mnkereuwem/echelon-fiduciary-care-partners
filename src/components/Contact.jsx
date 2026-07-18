@@ -71,11 +71,11 @@ export default function Contact() {
       <div className="section-padding max-w-7xl mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           <div>
-            <p className="section-label">Consultation Intake</p>
-            <h2 className="section-title mb-6">Begin a Confidential Dialogue</h2>
+            <p className="section-label">Partnership Inquiry</p>
+            <h2 className="section-title mb-6">Build Your California QME Practice</h2>
             <p className="font-sans text-cream/65 leading-relaxed max-w-md">
-              Engagements are initiated through professional referral channels. Submit your
-              inquiry below and a member of our practice will respond within one business day.
+              Physicians, law firms, and claims professionals may submit an inquiry below. A
+              member of our team will respond within one business day.
             </p>
             <div className="mt-12 hidden lg:block">
               <div className="w-px h-32 bg-champagne/30" />
@@ -129,7 +129,7 @@ export default function Contact() {
                       value={form.title}
                       onChange={handleChange}
                       className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors disabled:opacity-60"
-                      placeholder="Attorney, CLPF, Trustee…"
+                      placeholder="Psychiatrist, Physician, Attorney…"
                     />
                   </div>
                 </div>
@@ -170,7 +170,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="context" className="block font-sans text-xs uppercase tracking-widest text-cream/50 mb-2">
-                    Brief Case Context
+                    Partnership Context
                   </label>
                   <textarea
                     id="context"
@@ -181,7 +181,7 @@ export default function Contact() {
                     value={form.context}
                     onChange={handleChange}
                     className="w-full bg-bottle-light/50 border border-champagne/25 px-4 py-3 text-cream font-sans text-sm placeholder:text-cream/30 focus:outline-none focus:border-champagne/60 transition-colors resize-none disabled:opacity-60"
-                    placeholder="Summarize the matter, parties involved, and desired clinical scope…"
+                    placeholder="Tell us about your QME practice, coverage needs, or administrative requirements…"
                   />
                 </div>
 

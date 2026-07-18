@@ -9,7 +9,7 @@ const education = [
     institution: 'Hamilton College',
     degree: 'Undergraduate',
     detail:
-      'Undergraduate study developing advanced analytical frameworking and clear, objective argumentation—sharpened on the football field and track, where the discipline of a varsity athlete translates directly to sustained performance under fiduciary pressure.',
+      'Undergraduate study developing disciplined analytical frameworks and clear, objective communication—reinforced through the sustained performance demands of varsity athletics.',
   },
   {
     institution: 'Columbia University',
@@ -25,8 +25,8 @@ export default function Credentials() {
       <div className="absolute inset-0 architectural-grid opacity-30" />
       <div className="section-padding max-w-7xl mx-auto relative">
         <div className="mb-16">
-          <p className="section-label">Pedigree & Biography</p>
-          <h2 className="section-title">Rigorous Training. Deep Clinical Execution.</h2>
+          <p className="section-label">About Our Platform</p>
+          <h2 className="section-title">Operational Discipline. Physician Independence.</h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -48,18 +48,17 @@ export default function Credentials() {
           <div className="lg:col-span-7 space-y-10">
             <div className="space-y-6">
               <p className="font-sans text-cream/80 leading-relaxed text-base md:text-lg">
-                Echelon Med Legal was formed at the intersection of elite
-                institutional training and frontline clinical mastery—purpose-built for the
-                fiduciary class managing estates where cognitive decline, family fracture, and
-                litigation risk converge.
+                Echelon Med Legal is focused on partnering with psychiatrists and other
+                physicians who want to build or expand a California QME practice. We provide
+                the physical offices, administrative staffing, document coordination, and
+                operational systems required to manage QME panel work at scale.
               </p>
               <p className="font-sans text-cream/65 leading-relaxed">
-                Our practice brings together the disciplined analytical rigor of a top-tier
-                liberal arts education with the specialized clinical competencies required to
-                navigate complex psychosocial landscapes under judicial and trustee scrutiny.
-                We do not offer generic care coordination; we deliver objective, defensible
-                clinical intelligence that protects your clients, your trustees, and your
-                professional standing.
+                Our team handles the non-clinical workflow surrounding QME panels, including
+                court and legal document administration, record organization, scheduling,
+                deadlines, billing support, and approved physician logistics. The evaluating
+                doctor retains complete control over every examination, clinical finding,
+                medical opinion, and report conclusion.
               </p>
             </div>
 

@@ -11,15 +11,16 @@ export default function Hero() {
 
       <div className="relative section-padding w-full max-w-7xl mx-auto pt-32 pb-24">
         <div className="max-w-4xl animate-slide-up">
-          <p className="section-label mb-6">Southern California · Fiduciary Clinical Advisory</p>
+          <p className="section-label mb-6">California · QME Practice Infrastructure</p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-cream leading-[1.1] mb-8">
-            Clinical Risk Management for{' '}
-            <span className="text-champagne italic">Complex Estates.</span>
+            California QME Support for{' '}
+            <span className="text-champagne italic">Psychiatric Experts.</span>
           </h1>
           <p className="font-sans text-lg md:text-xl text-cream/75 leading-relaxed max-w-3xl mb-12 font-light">
-            We stabilize family crisis, assess cognitive vulnerability, and shield corporate
-            trustees from liability. Premium clinical oversight for Southern California&apos;s
-            elite legal and financial fiduciaries.
+            We partner with psychiatrists and other physicians to provide the offices,
+            administration, record management, and logistical support required to build an
+            efficient California QME practice—while every clinical decision remains solely
+            with the evaluating doctor.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#contact" className="btn-primary">

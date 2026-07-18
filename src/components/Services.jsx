@@ -1,27 +1,27 @@
 const services = [
   {
     number: '01',
-    title: 'Comprehensive Psychosocial Assessments',
+    title: '10 Compliant Medical Offices',
     description:
-      'Objective, court-ready evaluations of cognitive safety, lifestyle stabilization, and capacity.',
+      'Leased, furnished, staffed, and administratively managed locations across California designed to support QME panel coverage.',
   },
   {
     number: '02',
-    title: 'Trustee Clinical Audits',
+    title: 'QME Panel Administration',
     description:
-      'Acting as the eyes and ears on the ground for corporate and private trustees to monitor long-distance beneficiaries.',
+      'Non-clinical coordination of intake, scheduling, court and legal documents, deadlines, and panel-related workflows for the evaluating physician.',
   },
   {
     number: '03',
-    title: 'Family System De-escalation',
+    title: 'Medical Record Management',
     description:
-      'Mediating toxic or high-conflict family dynamics to prevent estate litigation from stalling.',
+      'High-volume record ingestion, verification, organization, and chronological preparation that reduces document fatigue and protects physician time.',
   },
   {
     number: '04',
-    title: 'Placement & Care Risk Mitigation',
+    title: 'Physician Logistics',
     description:
-      'Designing and auditing premium residential transitions and private duty nursing plans.',
+      'Administrative coordination of approved travel, meals, accommodations, testing logistics, billing support, and other practice expenses.',
   },
 ]
 
@@ -30,11 +30,11 @@ export default function Services() {
     <section id="services" className="relative bg-bottle-dark border-t border-champagne/15">
       <div className="section-padding max-w-7xl mx-auto">
         <div className="mb-16 md:mb-20">
-          <p className="section-label">Core Services</p>
-          <h2 className="section-title max-w-2xl">The Deliverables</h2>
+          <p className="section-label">California QME Infrastructure</p>
+          <h2 className="section-title max-w-2xl">The Administrative Platform</h2>
           <p className="mt-6 font-sans text-cream/60 max-w-xl leading-relaxed">
-            Formed by an Ivy League-trained clinician with an extensive background in complex
-            systems, family architecture, and crisis navigation.
+            Purpose-built for psychiatrists and other physicians who want to expand their QME
+            practice without building a statewide operational system from the ground up.
           </p>
         </div>
 

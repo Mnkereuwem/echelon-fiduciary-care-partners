@@ -1,18 +1,18 @@
 const sectors = [
   {
-    title: 'Trust & Estate Litigators',
+    title: 'Psychiatrists',
     description:
-      'Providing expert documentation and capacity verification to support contested proceedings and protective proceedings.',
+      'Supporting psychiatric experts with a turnkey administrative platform that protects clinical time and preserves independent medical judgment.',
   },
   {
-    title: 'Professional Fiduciaries',
+    title: 'Physician Evaluators',
     description:
-      'Subcontracting the complex mental health and placement logistics that fall outside traditional fiduciary scope.',
+      'Partnering with qualified MDs seeking statewide QME infrastructure, disciplined document workflows, and reliable practice logistics.',
   },
   {
-    title: 'Private Wealth & Family Offices',
+    title: 'Law Firms & Claims Examiners',
     description:
-      'Protecting high-net-worth clients facing sudden elderhood or cognitive decline without compromising discretion.',
+      'Delivering organized records, dependable administrative coordination, and timely medical-legal reporting support.',
   },
 ]
 
@@ -21,11 +21,11 @@ export default function Sectors() {
     <section id="sectors" className="relative bg-bottle-dark border-t border-champagne/15">
       <div className="section-padding max-w-7xl mx-auto">
         <div className="text-center mb-16 md:mb-20">
-          <p className="section-label">Target Sectors</p>
-          <h2 className="section-title">Who We Support</h2>
+          <p className="section-label">QME Partner Network</p>
+          <h2 className="section-title">Who We Partner With</h2>
           <p className="mt-6 font-sans text-cream/60 max-w-2xl mx-auto leading-relaxed">
-            Aligned with Southern California&apos;s premier legal, fiduciary, and wealth
-            advisory professionals.
+            Focused on California psychiatrists, physician evaluators, and the legal and claims
+            professionals who rely on complete, timely QME administration.
           </p>
         </div>
 
