@@ -13,7 +13,7 @@ const education = [
   },
   {
     institution: 'Columbia University',
-    degree: 'Master of Social Work (MSW)',
+    degree: 'Master of Science',
     detail:
       'Master of Science — Social Work: Advanced Clinical Practice. Advanced experience in home health, hospice, major hospital, and private practice settings, handling advanced medical documentation for organizations including Kaiser Permanente and Eisenhower Health.',
   },
