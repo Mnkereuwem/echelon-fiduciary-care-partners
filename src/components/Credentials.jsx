@@ -3,7 +3,7 @@ const education = [
     institution: "St. Paul's School",
     location: 'Concord, NH',
     detail:
-      'Secondary education instilling a foundation of strict excellence and institutional discipline.',
+      'Elite New England preparatory, Ivy League feeder, boarding school.',
   },
   {
     institution: 'Hamilton College',
