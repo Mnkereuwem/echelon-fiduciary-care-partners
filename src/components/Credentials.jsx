@@ -15,7 +15,7 @@ const education = [
     institution: 'Columbia University',
     degree: 'Master of Social Work (MSW)',
     detail:
-      'Graduate specialization in clinical family systems, advanced psychopathology, and crisis de-escalation.',
+      'Master of Science — Columbia University: Advanced Clinical Practice.',
   },
 ]
 
